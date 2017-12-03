@@ -11,6 +11,7 @@ import {
   InterestsComponent,
   LoginComponent,
   PortfolioComponent,
+  RegisterComponent,
 } from './containers';
 // MODULES
 import { ComponentsModule } from './components';
@@ -26,6 +27,7 @@ import { APP_ROUTES } from './routes';
     InterestsComponent,
     LoginComponent,
     PortfolioComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

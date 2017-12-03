@@ -5,6 +5,7 @@ import {
   InterestsComponent,
   LoginComponent,
   PortfolioComponent,
+  RegisterComponent,
 } from './containers';
 
 export const APP_ROUTES: Routes = [
@@ -27,6 +28,10 @@ export const APP_ROUTES: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: '**',
