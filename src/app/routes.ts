@@ -1,5 +1,9 @@
 import { Routes, Route } from '@angular/router';
-import { ContactMeComponent, HomeGridComponent } from './containers';
+import {
+  ContactMeComponent,
+  HomeGridComponent,
+  PortfolioComponent,
+} from './containers';
 
 export const APP_ROUTES: Routes = [
   {
@@ -9,6 +13,10 @@ export const APP_ROUTES: Routes = [
   {
     path: 'contact-me',
     component: ContactMeComponent
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent
   },
   {
     path: '**',

@@ -5,7 +5,11 @@ import { NgModule } from '@angular/core';
 import { MatGridListModule } from '@angular/material';
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { ContactMeComponent, HomeGridComponent,  } from './containers';
+import {
+  ContactMeComponent,
+  HomeGridComponent,
+  PortfolioComponent,
+} from './containers';
 // MODULES
 import { ComponentsModule } from './components';
 import { RouterModule, PreloadAllModules } from '@angular/router';
@@ -15,8 +19,9 @@ import { APP_ROUTES } from './routes';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeGridComponent,
     ContactMeComponent,
+    HomeGridComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
