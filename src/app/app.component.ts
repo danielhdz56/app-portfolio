@@ -4,8 +4,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   selector: 'app-root',
   styles: [``],
   template: `
-    <app-navbar>
-    </app-navbar>
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
     `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
