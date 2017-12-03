@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { MatGridListModule } from '@angular/material';
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { HomeGridComponent } from './containers';
+import { ContactMeComponent, HomeGridComponent,  } from './containers';
 // MODULES
 import { ComponentsModule } from './components';
 import { RouterModule, PreloadAllModules } from '@angular/router';
@@ -16,6 +16,7 @@ import { APP_ROUTES } from './routes';
   declarations: [
     AppComponent,
     HomeGridComponent,
+    ContactMeComponent,
   ],
   imports: [
     BrowserModule,
