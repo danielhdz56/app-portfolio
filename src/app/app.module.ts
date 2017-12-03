@@ -9,6 +9,7 @@ import {
   ContactMeComponent,
   HomeGridComponent,
   InterestsComponent,
+  LoginComponent,
   PortfolioComponent,
 } from './containers';
 // MODULES
@@ -23,6 +24,7 @@ import { APP_ROUTES } from './routes';
     ContactMeComponent,
     HomeGridComponent,
     InterestsComponent,
+    LoginComponent,
     PortfolioComponent,
   ],
   imports: [
