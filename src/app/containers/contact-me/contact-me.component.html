@@ -1,3 +1,30 @@
-<p>
-  contact-me works!
-</p>
+<br><br>
+<br><br>
+<div>
+  <form fxLayout="column" [formGroup]="formGroup">
+    <mat-form-field style="width:90%">
+      <input matInput placeholder="title" formControlName="title">
+      <mat-error>Make it easier, provide a title!</mat-error>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field style="width:90%">
+      <textarea
+        placeholder="text (optional)"
+        matTextareaAutosize
+        matAutosizeMinRows="3"
+        matInput
+        formControlName="body">
+      </textarea>
+    </mat-form-field>
+    <br>
+    <br>
+    <div style="width:90%" fxLayoutAlign="end end">
+      <button
+        style="width:5%"
+        mat-raised-button
+        color="primary"
+        (click)="onSubmit()">Submit!
+      </button>
+    </div>
+  </form>
+</div>

@@ -2,7 +2,12 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MatGridListModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatGridListModule,
+  MatInputModule,
+} from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import {
@@ -16,6 +21,7 @@ import {
 // MODULES
 import { ComponentsModule } from './components';
 import { RouterModule, PreloadAllModules } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 // OTHER
 import { APP_ROUTES } from './routes';
 
@@ -33,7 +39,12 @@ import { APP_ROUTES } from './routes';
     BrowserModule,
     BrowserAnimationsModule,
     ComponentsModule,
+    FlexLayoutModule,
+    FormsModule,
+    MatButtonModule,
     MatGridListModule,
+    MatInputModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules}),
   ],
   providers: [],
