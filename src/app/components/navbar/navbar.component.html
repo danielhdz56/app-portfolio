@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="">
+    <mat-icon>home</mat-icon>
+  </button>
+  <button mat-button routerLink="portfolio">
+    portfolio
+  </button>
+
+  <button mat-button [matMenuTriggerFor]="interests">interests</button>
+  <mat-menu #interests="matMenu" [overlapTrigger]="false">
+  </mat-menu>
+
+  <button mat-raised-button routerLink="contact-me" color="accent">contact me</button>
+
+  <span style="flex: 1 0 auto"></span>
+  <!-- TODO: Add auth -->
+  <div *ngIf="true">
+    <button mat-button>logout</button>
+  </div>
+
+  <div *ngIf="false">
+    <div fxShow fxHide.lt-sm="true">
+      <button mat-button color="" routerLink="register">register</button>
+      <button mat-button color="" routerLink="login">login</button>
+    </div>
+    <!-- Small vw -->
+    <button fxHide fxShow.lt-sm="true" mat-icon-button [matMenuTriggerFor]="login">
+      <mat-icon class="md-24">more_vert</mat-icon>
+    </button>
+    <mat-menu #login="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="register">register</button>
+      <button mat-menu-item routerLink="login">login</button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
