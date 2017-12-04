@@ -2,7 +2,7 @@
   <button mat-button routerLink="">
     <mat-icon>home</mat-icon>
   </button>
-  <button mat-button routerLink="">
+  <button mat-button routerLink="portfolio">
     portfolio
   </button>
 
@@ -10,19 +10,18 @@
   <mat-menu #interests="matMenu" [overlapTrigger]="false">
   </mat-menu>
 
-  <button mat-raised-button routerLink="" color="accent">contact me</button>
+  <button mat-raised-button routerLink="contact-me" color="accent">contact me</button>
 
   <span style="flex: 1 0 auto"></span>
   <!-- TODO: Add auth -->
   <div *ngIf="true">
-    <button mat-button routerLink="">dashboard</button>
     <button mat-button>logout</button>
   </div>
 
   <div *ngIf="false">
     <div fxShow fxHide.lt-sm="true">
-      <button mat-button color="" routerLink="">register</button>
-      <button mat-button color="" routerLink="">login</button>
+      <button mat-button color="" routerLink="register">register</button>
+      <button mat-button color="" routerLink="login">login</button>
     </div>
     <!-- Small vw -->
     <button fxHide fxShow.lt-sm="true" mat-icon-button [matMenuTriggerFor]="login">

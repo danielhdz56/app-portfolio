@@ -1,4 +1,5 @@
 // ANGULAR
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
@@ -25,7 +26,8 @@ const components = [
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatMenuModule
+    MatMenuModule,
+    RouterModule,
   ]
 })
 export class ComponentsModule { }
