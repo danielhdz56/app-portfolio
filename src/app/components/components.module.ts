@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
+  MatCardModule,
   MatIconModule,
   MatToolbarModule,
   MatMenuModule
@@ -11,9 +12,11 @@ import {
 import { FlexLayoutModule } from '@angular/flex-layout';
 // COMPONENTS
 import { NavbarComponent } from './navbar';
+import { ProjectComponent } from './project';
 
 const components = [
   NavbarComponent,
+  ProjectComponent,
 ];
 
 @NgModule({
@@ -24,6 +27,7 @@ const components = [
     CommonModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatCardModule,
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
