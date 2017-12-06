@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
   MatButtonModule,
+  MatCheckboxModule,
   MatGridListModule,
   MatInputModule,
 } from '@angular/material';
@@ -22,8 +23,13 @@ import {
 import { ComponentsModule } from './components';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+
+// NGRX
+import { reducers, metaReducers } from './store';
+
 // OTHER
 import { APP_ROUTES } from './routes';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -42,10 +48,12 @@ import { APP_ROUTES } from './routes';
     FlexLayoutModule,
     FormsModule,
     MatButtonModule,
+    MatCheckboxModule,
     MatGridListModule,
     MatInputModule,
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules}),
+    StoreModule.forRoot(reducers, {metaReducers}),
   ],
   providers: [],
   bootstrap: [AppComponent]
