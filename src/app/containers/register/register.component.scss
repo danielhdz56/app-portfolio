@@ -1,0 +1,14 @@
+:host {
+  flex-direction: row;
+  margin: 40px;
+}
+
+.mat-card {
+  &:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+}
+
+.mat-input-container {
+  margin-bottom: 10px;
+}
