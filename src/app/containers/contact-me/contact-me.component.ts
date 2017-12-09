@@ -21,6 +21,10 @@ export class ContactMeComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('hello');
+  }
+
   private _initFormGroup () {
     return this._formBuilder.group({
       title: [null, Validators.required],

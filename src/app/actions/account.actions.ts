@@ -50,7 +50,7 @@ export class LogoutFailAction implements Action {
 /** Register */
 export class RegisterAction implements Action {
   type = ActionTypes.REGISTER;
-  constructor (public payload: { email: string, password: string, username: string}) {}
+  constructor (public payload: { email: string, password: string}) {}
 }
 
 export class RegisterSuccessAction implements Action {

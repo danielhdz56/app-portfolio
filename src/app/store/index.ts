@@ -4,7 +4,7 @@ import { localStorageSync, LocalStorageConfig, rehydrateApplicationState } from 
 
 // REDUCERS
 import * as accounts from './account.reducer';
-import * as users from './user.reducer';
+import * as users from './users.reducer';
 // OTHER
 import { createSelector } from 'reselect';
 import { storageActions } from '../actions/index';
@@ -24,6 +24,7 @@ const localStorageOptions: LocalStorageConfig = {
   rehydrate: true
 };
 
+// TODO. implement storefreeze for development
 const developmentReducer: ActionReducer<State> = compose(localStorageSync(localStorageOptions), combineReducers)(reducers);
 export function reducer(state: any, action: any) {
     return developmentReducer(state, action);
@@ -55,3 +56,4 @@ export const getAccount = (state: State) => state.accounts;
 export const getAccountToken = createSelector(getAccount, accounts.getToken);
 export const getAccountId = createSelector(getAccount, accounts.getId);
 export const getAccountUser = createSelector(getUserEntities, getAccountId, (u, id) => u[id]);
+export const getIsAuth = createSelector(getAccountUser, user => !!user);

@@ -19,7 +19,7 @@ export function reducer(state = initialState, action: accountActions.Actions): S
       return Object.assign({}, state, {
         user_id: null,
         token: null,
-      });
+    });
     }
     case accountActions.ActionTypes.REGISTER_SUCCESS: {
       return Object.assign({}, state, action.payload);

@@ -26,22 +26,4 @@
 
     </form>
   </div>
-  <div *ngIf="!showRegister" style="width: 90%">
-    <form fxLayout="column" [formGroup]="loginFormGroup" (ngSubmit)="onSubmitLoginForm()">
-
-      <mat-input-container floatPlaceholder="auto">
-        <input matInput type="text" formControlName="email" placeholder="Email">
-        <mat-error>Email is required</mat-error>
-      </mat-input-container>
-
-      <mat-input-container floatPlaceholder="auto">
-        <input matInput formControlName="password" placeholder="Password" type="Password">
-        <mat-error>Password is required</mat-error>
-      </mat-input-container>
-
-      <br>
-
-      <button mat-raised-button type="submit" color="primary">login</button>
-    </form>
-  </div>
 </div>

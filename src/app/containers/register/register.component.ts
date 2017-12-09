@@ -86,6 +86,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   onSubmitRegisterForm () {
     this.submitAttempted = true;
     const relevantForm = _.omit(this.registerFormGroup.value, ['confirmPassword']);
+    console.log(relevantForm);
     this._store$.dispatch(new accountActions.RegisterAction(relevantForm));
   }
 
